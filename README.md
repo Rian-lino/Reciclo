@@ -67,7 +67,7 @@ O repositório está organizado da seguinte forma para manter a clareza e a manu
 
 ## 👤 Autor
 
-Feito por **[SEU NOME AQUI]**.
+Feito por **[Rian Lino,Pedro Augusto,Lucrécia França,Djennifer Santos]**.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([SEU-LINK-DO-LINKEDIN-AQUI])
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/<seu-usuario-github>/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/<Rian-lino-github>/)
