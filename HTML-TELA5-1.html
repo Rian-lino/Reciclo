@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela do Reciclador</title>
+  <link rel="stylesheet" href="CSS/pagina 5/CSS-TELA5-1.css">
+</head>
+<body>
+  <div class="perfil">
+    <!-- Cabeçalho fixo -->
+    <div class="cabecalho-fixo"><a href="HTML-TELA4-1.html">
+      <img src="imgs/tela 5/seta-voltar.png" alt="Voltar" class="botao-voltar"></a>
+
+      <h2>Olá, <span id="nome-catador">[nome]</span>!</h2>
+      <p class="subtitulo">Confira os descartes disponíveis para coleta</p>
+
+      <div class="campo-pesquisa">
+  <button class="botao-lupa">
+    <img src="imgs/tela 5/lupa.png" alt="Pesquisar">
+  </button>
+  <input type="text" placeholder="Pesquisar" id="campo-pesquisa-input">
+</div>
+
+
+      <div class="filtros-container">
+  <button data-categoria="" class="filtro">Perto de você</button>
+  <button data-categoria="papelao" class="filtro">Papelão</button>
+  <button data-categoria="plastico" class="filtro">Plástico</button>
+  <button data-categoria="vidro" class="filtro">Vidro</button>
+  <button data-categoria="metal" class="filtro">Metal</button>
+  <button type="button" class="icone-limpar" title="Limpar filtros">
+    <img src="imgs/tela 5/limpar.png" alt="Limpar filtros">
+  </button>
+</div>
+
+
+
+    </div>
+
+  <!-- Área rolável fixa -->
+   
+<div class="lista-descartes-container">
+  <div class="lista-descartes">
+
+
+
+    <div class="item-descarte">
+      <div class="caixa-descarte">
+        <p><strong>Nome:</strong> João Silva</p>
+        <p><strong>Localização:</strong> Rua das Flores, 123</p>
+        <p><strong>Material:</strong> Plástico</p>
+        <p><strong>Contato:</strong> (11) 99999-9999</p>
+        <p><strong>Observações:</strong> Garrafas PET limpas</p>
+      </div>
+      <button class="botao-aceitar">
+        <img src="imgs/tela 5/aceitar.png" alt="Aceitar" class="icone-botao">
+        Aceitar coleta
+      </button>
+    </div>
+
+    <div class="item-descarte">
+    <div class="caixa-descarte">
+      <p><strong>Nome:</strong> Maria Oliveira</p>
+      <p><strong>Localização:</strong> Av. Central, 456</p>
+      <p><strong>Material:</strong> Papelão</p>
+      <p><strong>Contato:</strong> (11) 98888-8888</p>
+      <p><strong>Observações:</strong> Caixas desmontadas</p>
+    </div>
+    <button class="botao-aceitar">
+      <img src="imgs/tela 5/aceitar.png" alt="Aceitar" class="icone-botao">
+      Aceitar coleta
+    </button>
+  </div>
+
+  <div class="item-descarte">
+    <div class="caixa-descarte">
+      <p><strong>Nome:</strong> Carlos Souza</p>
+      <p><strong>Localização:</strong> Rua Bela Vista, 98</p>
+      <p><strong>Material:</strong> Vidro</p>
+      <p><strong>Contato:</strong> (11) 97777-7777</p>
+      <p><strong>Observações:</strong> Garrafas e potes de vidro</p>
+      </div>
+    <button class="botao-aceitar">
+      <img src="imgs/tela 5/aceitar.png" alt="Aceitar" class="icone-botao">
+      Aceitar coleta
+    </button>
+    </div>
+</div>
+
+</div>
+    <!-- Botão Suporte -->
+    <button class="botao-suporte">Suporte</button>
+  </div>
+
+  <script src="JS/tela 5/tela 5.js"></script>
+</body>
+</html>
+

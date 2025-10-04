@@ -1,0 +1,78 @@
+/* Estilo básico da página */
+body {
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #bfbfbf;
+  color: #1a1919;
+}
+
+/* Estilos do container principal do perfil */
+.perfil {
+  position: relative;
+  background-color: #F9F3E6;
+  width: 90%;
+  min-height: 500px;
+  border: 5px solid #4caf50;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 250px;
+  padding: 15px;
+  overflow-y: auto;
+  font-weight: normal;
+  text-align: center; /* centraliza conteúdo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* coloca o botão no rodapé */
+}
+
+/* Conteúdo central */
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* espaço entre imagem e texto */
+  margin-top: 60px;
+}
+
+/* Imagem central */
+.imagem-central {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Texto da mensagem */
+.mensagem {
+  font-size: 12px;
+  color: #1a1919;
+  text-align: center;
+}
+
+/* Botão principal */
+.btn-cadastrar {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.btn-cadastrar:hover {
+  background: #45a049;
+}
+/* Texto final */
+.final {
+  font-size: 11px;
+  color: #333;
+}
+a {
+  text-decoration: none;
+}

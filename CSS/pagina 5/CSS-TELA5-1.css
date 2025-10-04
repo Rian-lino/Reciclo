@@ -1,0 +1,226 @@
+/* Estilo básico da página */
+body {
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #bfbfbf;
+  color: #1a1919;
+  overflow-y: auto;
+}
+
+/* Container principal */
+.perfil {
+  position: relative;
+  background-color: #F9F3E6;
+  width: 90%;
+  max-width: 250px;
+  max-height: 500px;
+  border: 5px solid #4caf50;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  font-size: 12px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botão de voltar */
+.botao-voltar {
+  position: absolute;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Cabeçalho fixo */
+.cabecalho-fixo {
+  position: sticky;
+  top: 0;
+  background-color: #F9F3E6;
+  z-index: 10;
+  padding-top: 25px; /* espaço por causa da seta */
+}
+
+/* Título e subtítulo */
+h2 {
+  margin: 20px 0 5px;
+  font-weight: normal;
+}
+
+.subtitulo {
+  margin-top: 0;
+  font-size: 11px;
+}
+
+/* Campo de pesquisa */
+.campo-pesquisa {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+/* Botão da lupa */
+.botao-lupa {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 6px; /* espaço entre lupa e input */
+  display: flex;
+  align-items: center;
+}
+
+.botao-lupa img {
+  width: 14px;
+  height: 14px;
+}
+
+/* Input de pesquisa */
+.campo-pesquisa input {
+  border: none;
+  outline: none;
+  font-size: 11px;
+  flex: 1;
+  background-color: transparent;
+}
+
+
+.filtros-container {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  gap: 6px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.filtro {
+  border: 1px solid #4caf50;
+  background-color: #fff;
+  color: #1a1919;
+  border-radius: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 11px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.filtro:hover {
+  background-color: #eaf7ea;
+}
+
+/* Estado quando selecionado: totalmente verde */
+.filtro.selecionado {
+  background-color: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+}
+
+.icone-limpar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.icone-limpar img {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* Container rolável com altura fixa */
+.lista-descartes-container {
+  height: 300px; /* ajuste conforme necessário */
+  overflow-y: auto; /* rolagem vertical */
+  padding-right: 5px;
+  box-sizing: border-box; /* evita overflow por padding */
+}
+
+/* Lista de descartes ocupa 100% do container */
+.lista-descartes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cada item mantém caixa + botão */
+.item-descarte {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Caixas de descartes */
+.caixa-descarte {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.caixa-descarte p {
+  margin: 3px 0;
+  font-size: 11px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Botão Aceitar coleta abaixo da caixa */
+.botao-aceitar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 11px;
+  padding: 5px 8px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.botao-aceitar:hover {
+  background-color: #3e8e41;
+}
+
+.icone-botao {
+  width: 14px;
+  height: 14px;
+}
+
+
+
+/* Botão Suporte */
+.botao-suporte {
+  border: 1px solid #4caf50;
+  background-color: transparent;
+  color: #4caf50;
+  border-radius: 8px;
+  padding: 6px 0;
+  font-size: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.botao-suporte:hover {
+  background-color: #eaf7ea;
+}
+

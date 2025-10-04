@@ -1,0 +1,127 @@
+/* Estilo básico da página */
+body {
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #bfbfbf;
+  color: #1a1919;
+  overflow-y: auto;
+}
+
+/* Estilos do container principal do perfil */
+.perfil {
+  position: relative; /* necessário para posicionamento do botão de voltar */
+  background-color: #F9F3E6;
+  width: 90%; /* responsividade */
+  max-height: 500px; /* responsividade */
+  border: 5px solid #4caf50;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 250px;
+  padding: 15px 15px 15px 15px; /* padding-top right-bottom-left */
+  overflow-y: auto; /* rolagem caso conteúdo ultrapasse */
+  font-size: 12px;  /* muda o tamanho */
+  font-weight: normal;  /* tira o negrito */
+  text-align: left;
+}
+
+/* Botão de voltar (imagem) */
+.botao-voltar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Logo */
+.logo {
+  display: block;        /* garante que margin funcione */
+  margin: 0 auto;        /* centraliza horizontalmente */
+  width: 50px;          /* ajuste o tamanho que quiser */
+  height: auto;          /* mantém proporção */
+
+}
+
+.ilustra3 {
+  width: 200px;   /* largura */
+  height: auto;   /* altura automática, mantém proporção */
+  display: block; /* permite centralizar com margin */
+  margin: 15px auto 20px; /* topo, laterais e baixo */
+}
+
+/* Título principal */
+h2 {
+  margin: 5px 0 20px;
+  font-weight: normal;
+  font-size: 17px;
+  text-align: center;
+}
+
+/* Estrutura caixa imagem */
+.passo {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+/* Estilo caixa imagem */
+.passo img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: #466cb4;
+  border-radius: 20%;
+  padding: 4px;
+}
+
+/* Títulos */
+.titulo-passo {
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #1a1919;
+  margin-bottom: 2px;
+}
+
+/* Descrição */
+.texto-passo {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* Texto resumo */
+.resumo {
+  margin: 15px 0;
+  font-size: 12px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Botão Voltar ao início */
+.btn-cadastrar {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.btn-cadastrar:hover {
+  background: #45a049;
+}
+
+.final {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #333;
+  text-align: center;
+}

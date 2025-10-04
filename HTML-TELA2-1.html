@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Descarte</title>
+  <link rel="stylesheet" href="CSS/tela 2/CSS-TELA2-1.css">
+  <style>.botao-opcao.selecionado {
+            border: 2px solid #f15a2d;
+            transform: scale(0.9);
+        }</style>
+</head>
+<body>
+ 
+  <!-- Container principal -->
+  <div class="perfil">
+    <!-- Botão de voltar -->
+     <a href="HTML-TELA1- (ATUALIZADO2).html">
+    <img src="imgs/tela 2/seta-voltar.png" alt="Voltar" class="botao-voltar"></a>
+
+    <!-- Título da tela -->
+    <h2>Fazer um descarte</h2>
+    <p class="descricao">Preencha suas informações para descartar</p>
+<form id="inform">
+    <!-- Campo Nome -->
+    <label for="nome">*Seu nome:</label>
+    <input type="text" id="nome" placeholder="Ex: João Almeida" required>
+
+    <!-- Campo Telefone e Email -->
+    <div class="linha-contato">
+      <label for="telefone">*Seu número de telefone:</label>
+      <input type="tel" id="telefone" placeholder="Ex: (00) 12345-6789">
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" placeholder="Digite seu e-mail">
+    </div>
+
+    <!-- Seleção de descarte -->
+    <label>Selecione o que você vai descartar:</label>
+    <div class="botoes-descartes">
+      <div class="opcao-wrapper">
+        <button type="button" class="botao-opcao" id="inPapelão" data-valor="papelao">
+          <img src="imgs/tela 2/papelao.png" alt="Papelão">
+        </button>
+        <span>Papelão</span>
+      </div>
+
+      <div class="opcao-wrapper">
+        <button type="button" class="botao-opcao" id="inPlastico" data-valor="plastico">
+          <img src="imgs/tela 2/plastico.png" alt="Plástico">
+        </button>
+        <span>Plástico</span>
+      </div>
+
+      <div class="opcao-wrapper">
+        <button  type="button" class="botao-opcao" id="inVidro" data-valor="Vidro">
+          <img src="imgs/tela 2/vidro.png" alt="Vidro">
+        </button>
+        <span>Vidro</span>
+      </div>
+
+      <div class="opcao-wrapper">
+        <button type="button" class="botao-opcao" id="inMetal" data-valor="Metal">
+          <img src="imgs/tela 2/metal.png" alt="Metal">
+        </button>
+        <span>Metal</span>
+      </div>
+
+      <div class="opcao-wrapper">
+        <button type="button" class="botao-opcao" id="inEletrônico" data-valor="Eletronico">
+          <img src="imgs/tela 2/eletronico.png" alt="Eletrônico">
+        </button>
+        <span>Eletrônico</span>
+      </div>
+    </div>
+
+    <!-- Campo Endereço -->
+    <label for="endereco">*Endereço (Rua, número e bairro):</label>
+    <input type="text" id="endereco" placeholder="Ex: Rua Treze de Maio, 104, Centro" required>
+
+    <!-- Campo Observações -->
+    <label for="obs">Observações:</label>
+    <textarea id="obs" placeholder="Ex: Tenho uma quantidade razoável de papelão. Alguns itens estão limpos, outros não." required></textarea>
+
+    <!-- Botão final -->
+    <button type="submit" class="btn-cadastrar" id="incadastro">Cadastrar descarte</button>
+</form>
+  </div>
+  <script src="JS/tela 2/tela 2.js"></script>
+</body>
+</html>
+
