@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório do Reciclo! Este projeto é uma plataforma web front-end desenvolvida para facilitar a conexão entre cidadãos que desejam descartar materiais recicláveis e os catadores/recicladores locais, otimizando o processo de coleta seletiva.
 
-🔗 **Acesse a versão ao vivo:** https://github.com/Rian-lino/Reciclo
+🔗 **Acesse a versão ao vivo:** https://rian-lino.github.io/Reciclo/
 
 ## ✨ Funcionalidades Principais
 
@@ -70,4 +70,4 @@ O repositório está organizado da seguinte forma para manter a clareza e a manu
 Feito por **[Rian Lino,Pedro Augusto,Lucrécia França,Djennifer Santos]**.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]([SEU-LINK-DO-LINKEDIN-AQUI])
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/<Rian-lino-github>/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rian-lino)
