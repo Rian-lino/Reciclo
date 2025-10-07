@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.removeItem('dadosDescarte');
     }
 
-    // ===================================================================
+    
     // PARTE 3: LÓGICA DE FILTRAGEM E PESQUISA (MODIFICADA)
-    // ===================================================================
+   
     const filtros = document.querySelectorAll('.filtro');
     const botaoLimpar = document.querySelector('.icone-limpar');
     const campoPesquisa = document.getElementById('campo-pesquisa-input'); // NOVO
@@ -96,3 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
         aplicarFiltros();
     });
 });
+const botaosuporte = document.querySelector ('#BotSuporte')
+        // 2. Adiciona o "ouvinte de evento" de clique para ele
+        botaosuporte.addEventListener('click', function() {
+            // 3. Define a ação (redirecionar para produtos.html)
+            window.location.href = "HTML-TELA8-1.html";
+        });
