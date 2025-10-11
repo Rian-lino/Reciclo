@@ -1,66 +1,42 @@
-// Espera o conteúdo da página carregar para garantir que todos os elementos existem
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { // Aguarda o carregamento completo da página
 
-    // CORREÇÃO AQUI: Agora seleciona o formulário com o ID correto "#inform"
-    const frm = document.querySelector("#inform");
+    const frm = document.querySelector("#inform"); // Captura o elemento do formulário
+    const botoesOpcao = document.querySelectorAll(".botao-opcao"); // Captura todos os botões de descarte
 
-    // Seleciona todos os botões que têm a classe ".botao-opcao"
-    const botoesOpcao = document.querySelectorAll(".botao-opcao");
+    let descarteEscolhido = ''; // Cria variável para guardar a opção escolhida
 
-    // Variável para guardar qual descarte foi selecionado
-    let descarteEscolhido = '';
+    botoesOpcao.forEach(botao => { // Percorre cada um dos botões
+        botao.addEventListener('click', () => { // Adiciona o evento de clique a cada botão
+            botoesOpcao.forEach(btn => btn.classList.remove('selecionado')); // Remove a seleção dos outros botões
 
-    // --- LÓGICA PARA SELECIONAR O TIPO DE DESCARTE ---
-    botoesOpcao.forEach(botao => {
-        // Adiciona um "ouvinte" de clique para cada botão de opção
-        botao.addEventListener('click', () => {
-            // Primeiro, remove a classe 'selecionado' de TODOS os outros botões
-            botoesOpcao.forEach(btn => btn.classList.remove('selecionado'));
-
-            // Depois, adiciona a classe 'selecionado' APENAS no botão que foi clicado
-            botao.classList.add('selecionado');
+            botao.classList.add('selecionado'); // Adiciona a seleção ao botão clicado
             
-            // Guarda o valor do atributo 'data-valor' do botão na nossa variável
-            descarteEscolhido = botao.dataset.valor;
+            descarteEscolhido = botao.dataset.valor; // Salva o valor do botão na variável
         });
     });
 
-    // --- LÓGICA PARA ENVIAR O FORMULÁRIO ---
-    // Apenas adicione o "ouvinte" se o formulário foi encontrado
-    if (frm) {
-        frm.addEventListener('submit', (event) => {
-            // Previne o comportamento padrão do formulário (que é recarregar a página)
-            event.preventDefault();
+    if (frm) { // Verifica se o formulário foi encontrado na página
+        frm.addEventListener('submit', (event) => { // Adiciona o evento de envio ao formulário
+            event.preventDefault(); // Impede o comportamento padrão de recarregar a página
 
-            // Verifica se o usuário realmente escolheu um tipo de descarte
-            
+            if (descarteEscolhido === 'Eletronico') { // Verifica se a escolha foi 'Eletronico'
+                window.location.href = 'HTML-TELA7-1.html'; // Redireciona para a página específica de eletrônicos
+            } else { // Executa para qualquer outra opção de descarte
+                const dadosDoFormulario = { // Coleta todas as informações dos campos
+                    nome: document.getElementById('nome').value,
+                    telefone: document.getElementById('telefone').value,
+                    email: document.getElementById('email').value,
+                    endereco: document.getElementById('endereco').value,
+                    observacoes: document.getElementById('obs').value,
+                    tipoDescarte: descarteEscolhido
+                };
 
-            // 3. Redireciona o usuário para a página de confirmação/suporte
-            if (descarteEscolhido === 'Eletronico') {window.location.href = 'HTML-TELA7-1.html';}
-            else {
-            
-            // Se for QUALQUER OUTRA OPÇÃO, aí sim coletamos e salvamos os dados.
-            
-            // 1. Coleta todos os dados dos campos em um único objeto
-            const dadosDoFormulario = {
-                nome: document.getElementById('nome').value,
-                telefone: document.getElementById('telefone').value,
-                email: document.getElementById('email').value,
-                endereco: document.getElementById('endereco').value,
-                observacoes: document.getElementById('obs').value,
-                tipoDescarte: descarteEscolhido
-            };
+                localStorage.setItem('dadosDescarte', JSON.stringify(dadosDoFormulario)); // Salva os dados no armazenamento do navegador
 
-            // 2. Converte e salva os dados no localStorage
-            localStorage.setItem('dadosDescarte', JSON.stringify(dadosDoFormulario));
-
-            // 3. Redireciona para a página padrão
-            window.location.href = 'HTML-TELA3-1.html';
-        }
-                 
-            
+                window.location.href = 'HTML-TELA3-1.html'; // Redireciona para a página de confirmação padrão
+            }
         });
-    } else {
-        console.error("Erro: O elemento do formulário com id '#inform' não foi encontrado.");
+    } else { // Executa caso o formulário não seja encontrado
+        console.error("Erro: O elemento do formulário com id '#inform' não foi encontrado."); // Exibe um erro no console
     }
 });
